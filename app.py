@@ -443,6 +443,9 @@ def appstatus():
     else:
         return render_template('userapprovalstatus.html', out=stat, mess="null")
 
+@app.route('/about',methods=['GET','POST'])
+def about():
+    return render_template("about.html")
 
 if __name__ == "__main__":
     app.run(debug=False, port = int(os.environ.get("PORT", 5000)))
